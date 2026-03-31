@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydriq — Privacy Policy</title>
+    <style>
+        :root {
+            --bg: #0D1117;
+            --surface: #161B22;
+            --text: #E6EDF3;
+            --muted: #8B949E;
+            --accent: #6DD8E5;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 24px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        h1 { font-size: 1.75rem; margin-bottom: 8px; color: var(--accent); }
+        h2 { font-size: 1.25rem; margin-top: 32px; margin-bottom: 12px; color: var(--accent); }
+        h3 { font-size: 1rem; margin-top: 20px; margin-bottom: 8px; }
+        p, li { margin-bottom: 12px; color: var(--text); }
+        ul { padding-left: 24px; }
+        .subtitle { color: var(--muted); font-size: 0.9rem; margin-bottom: 24px; }
+        .highlight { background: var(--surface); border-left: 3px solid var(--accent); padding: 16px; border-radius: 4px; margin: 16px 0; }
+        a { color: var(--accent); }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #30363D; }
+        th { color: var(--accent); font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="subtitle">Last updated: March 31, 2026 &middot; Effective: March 31, 2026</p>
+
+<div class="highlight">
+    <strong>Summary:</strong> Hydriq stores all your data locally on your device by default. Optional Google Drive backup transmits data only when you explicitly enable it. We do not share personal information with third parties. There are no analytics, no ads, and no tracking.
+</div>
+
+<h2>1. Introduction</h2>
+<p>Hydriq ("the App") is a hydration tracking application for Android developed by an independent developer ("we", "us", "our"). This Privacy Policy explains how the App handles your information.</p>
+<p>By using Hydriq, you agree to the practices described in this policy.</p>
+
+<h2>2. Information We Collect</h2>
+
+<div class="highlight">
+    <strong>All data you enter is stored on your device by default.</strong> If you enable Google Drive backup, a copy of your data is uploaded to your personal Google Drive account (see Section 4).
+</div>
+
+<p>The App allows you to input the following data, which is stored locally on your device only:</p>
+
+<table>
+    <tr><th>Data Type</th><th>Purpose</th><th>Storage</th></tr>
+    <tr><td>Display name (optional)</td><td>Personalized greetings</td><td>Local only</td></tr>
+    <tr><td>Weight</td><td>Calculate hydration goal</td><td>Local only</td></tr>
+    <tr><td>Biological sex</td><td>Calculate hydration goal</td><td>Local only</td></tr>
+    <tr><td>Activity level</td><td>Calculate hydration goal</td><td>Local only</td></tr>
+    <tr><td>Climate</td><td>Calculate hydration goal</td><td>Local only</td></tr>
+    <tr><td>Wake/sleep times</td><td>Reminder scheduling</td><td>Local only</td></tr>
+    <tr><td>Drink logs (type, amount, time)</td><td>Track hydration</td><td>Local only</td></tr>
+    <tr><td>App preferences</td><td>Theme, sound, haptic settings</td><td>Local only</td></tr>
+</table>
+
+<h2>3. How Your Data Is Stored</h2>
+<ul>
+    <li>All data is stored in an encrypted local database (Room/SQLite with SQLCipher AES-256-GCM) on your device.</li>
+    <li>The encryption key is protected by the Android Keystore system.</li>
+    <li>App preferences are stored in local SharedPreferences.</li>
+    <li>The App does not include any analytics SDKs, crash reporting tools, or advertising frameworks.</li>
+    <li>Network requests are made only for: optional Google Drive backup/restore, Google Sign-In authentication, and in-app purchases via Google Play Billing. All network traffic uses HTTPS.</li>
+</ul>
+
+<h2>4. Cloud Backup</h2>
+
+<h3>Google Drive Backup (Optional)</h3>
+<p>You may optionally sign in with your Google account to back up your hydration data to Google Drive. When enabled:</p>
+<ul>
+    <li>Backups are stored in your Google Drive's <strong>appDataFolder</strong> — a hidden, app-isolated folder that is not visible in your Drive UI and can only be accessed by Hydriq.</li>
+    <li>Your Google email address is stored locally to maintain the sync session.</li>
+    <li>You can disable backup, delete cloud backups, or sign out at any time in Settings &rarr; Data &amp; Privacy.</li>
+    <li>We do not access any other files in your Google Drive — the App uses only the <code>drive.appdata</code> scope.</li>
+</ul>
+
+<h3>Android Auto Backup</h3>
+<p>Android may back up your app preferences (theme, settings) via Google's Auto Backup service. Your hydration database and encryption keys are <strong>excluded</strong> from Auto Backup to protect your health-related data.</p>
+<p>You control Android's backup settings in your device's system settings.</p>
+
+<h2>5. Data Export &amp; Portability</h2>
+<p>The App provides built-in tools for data portability:</p>
+<ul>
+    <li><strong>JSON Backup:</strong> Export your complete data (profile + hydration logs) as a JSON file.</li>
+    <li><strong>CSV Export:</strong> Export your hydration logs as a CSV spreadsheet.</li>
+    <li><strong>Restore:</strong> Import a previously exported JSON backup.</li>
+</ul>
+<p>Exported files are saved to your device's Downloads folder or shared via Android's share sheet. We have no access to these files.</p>
+
+<h2>6. Data Deletion</h2>
+<p>You can delete all your data at any time:</p>
+<ul>
+    <li><strong>Individual entries:</strong> Swipe to delete any drink log (with undo).</li>
+    <li><strong>All data:</strong> Settings &rarr; Delete All Data permanently removes all hydration logs and resets your profile.</li>
+    <li><strong>Uninstall:</strong> Uninstalling the App removes all locally stored data.</li>
+</ul>
+
+<h2>7. Permissions</h2>
+<p>The App requests only the following Android permissions:</p>
+<table>
+    <tr><th>Permission</th><th>Purpose</th><th>Required?</th></tr>
+    <tr><td>INTERNET</td><td>Google Drive backup, Google Sign-In, in-app purchases</td><td>Automatic</td></tr>
+    <tr><td>POST_NOTIFICATIONS</td><td>Hydration reminders</td><td>Optional (requested at runtime)</td></tr>
+    <tr><td>RECEIVE_BOOT_COMPLETED</td><td>Reschedule reminders after device restart</td><td>Automatic</td></tr>
+    <tr><td>VIBRATE</td><td>Haptic feedback on drink logging</td><td>Automatic</td></tr>
+</table>
+<p>No permission grants access to your camera, microphone, contacts, location, or any other sensitive data.</p>
+
+<h2>8. Third-Party Services</h2>
+<p>Hydriq integrates with the following Google services only:</p>
+<ul>
+    <li><strong>Google Play Billing</strong> — processes in-app purchases (Hydriq Pro, Tip Jar). Payment details are handled entirely by Google Play; the App stores only a purchase status flag locally.</li>
+    <li><strong>Google Drive API</strong> — optional cloud backup to your personal Drive (appDataFolder scope only). Used only when you enable Drive backup in Settings.</li>
+    <li><strong>Google Sign-In</strong> — authenticates your Google account for Drive backup. Your email is stored locally; no data is sent to our servers.</li>
+</ul>
+<p>The App does <strong>not</strong> use:</p>
+<ul>
+    <li>No analytics (no Firebase, Google Analytics, Mixpanel, etc.)</li>
+    <li>No advertising SDKs</li>
+    <li>No crash reporting tools</li>
+    <li>No social media integrations</li>
+    <li>No proprietary server-side components — all data stays between your device and your Google account</li>
+</ul>
+
+<h2>9. In-App Purchases</h2>
+<p>Hydriq offers optional in-app purchases:</p>
+<ul>
+    <li><strong>Hydriq Pro</strong> ($2.99 one-time) — unlocks cosmetic Spirit skins, outfits, accessories, and themes. No core functionality is gated behind Pro.</li>
+    <li><strong>Tip Jar</strong> (3 tiers: $0.49 / $0.99 / $1.49) — optional support tips.</li>
+</ul>
+<p>All purchases are processed by Google Play Billing. The App does not store payment card details or financial information.</p>
+
+<h2>10. Children's Privacy</h2>
+<p>Hydriq is not directed at children under 13. The App contains opt-in alcohol tracking (for adult wellness use) and in-app purchases. Parental guidance is recommended. See the health disclaimer at Settings &rarr; About &amp; Support &rarr; Legal.</p>
+
+<h2>11. Health Disclaimer</h2>
+<p>Hydriq is a wellness tool designed to help you track your water intake. It is <strong>not a medical device</strong> and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider regarding your hydration needs, especially if you have a medical condition.</p>
+
+<h2>12. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Changes will be reflected in the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+<h2>13. Contact</h2>
+<p>If you have questions about this Privacy Policy or the App's data practices, please contact us:</p>
+<p>Email: <a href="mailto:hydriq.app@gmail.com">hydriq.app@gmail.com</a></p>
+
+<hr style="border-color: #30363D; margin: 32px 0;">
+<p style="color: var(--muted); font-size: 0.85rem;">&copy; 2026 Hydriq. All rights reserved.</p>
+
+</body>
+</html>
