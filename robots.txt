@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rakesh87.github.io/hydriq-web/sitemap.xml
